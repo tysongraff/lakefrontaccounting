@@ -10,59 +10,131 @@
             margin: 0;
             padding: 0;
             color: #333;
-            line-height: 1.6;
+            line-height: 1.7;
         }
+
+        /* Header / Navigation */
         header {
             background: #0f2a44;
-            color: #ffffff;
-            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
         nav {
+            max-width: 1100px;
+            margin: auto;
+            padding: 15px 20px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .logo img {
+            height: 48px;
+            margin-right: 14px;
         }
         nav a {
             color: #ffffff;
             margin-left: 20px;
             text-decoration: none;
             font-weight: bold;
+            font-size: 0.95em;
         }
         nav a:hover {
             text-decoration: underline;
         }
+
+        /* Sections */
+        .section {
+            padding: 70px 20px;
+        }
         .container {
             max-width: 1000px;
             margin: auto;
-            padding: 40px 20px;
         }
-        h1, h2, h3 {
+
+        .home {
+            background: #ffffff;
+        }
+        .services {
+            background: #eef3f8;
+        }
+        .contact {
+            background: #f6f6f6;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
             color: #0f2a44;
         }
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            color: #0f2a44;
+        }
+        h3 {
+            margin-top: 35px;
+            color: #0f2a44;
+        }
+        h4 {
+            margin-top: 25px;
+            color: #0f2a44;
+        }
+
+        p {
+            max-width: 800px;
+        }
+
         .button {
             display: inline-block;
-            background: #0f2a44;
+            background: #e07a1f;
             color: #ffffff;
-            padding: 12px 20px;
+            padding: 14px 26px;
             text-decoration: none;
             border-radius: 4px;
-            margin-top: 10px;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
         .button:hover {
-            background: #163d63;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            background: #c96b1b;
         }
-        footer {
-            background: #f4f4f4;
-            padding: 20px;
-            text-align: center;
-            font-size: 0.9em;
-            color: #555;
-        }
-        section {
-            margin-bottom: 60px;
-        }
+
         ul {
             margin-left: 20px;
+            max-width: 800px;
+        }
+
+        footer {
+            background: #0f2a44;
+            color: #ffffff;
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 0.9em;
+        }
+
+        /* Mobile tweaks */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav a {
+                margin: 10px 10px 0 0;
+            }
+            .logo {
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
@@ -70,7 +142,10 @@
 
 <header>
     <nav>
-        <div><strong>Lakefront Accounting</strong></div>
+        <div class="logo">
+            <img src="lakefront-logo.png" alt="Lakefront Accounting Logo">
+            Lakefront Accounting
+        </div>
         <div>
             <a href="#home">Home</a>
             <a href="#services">Services</a>
@@ -80,9 +155,8 @@
     </nav>
 </header>
 
-<div class="container">
-
-    <section id="home">
+<section id="home" class="section home">
+    <div class="container">
         <h1>Trusted Tax & Advisory Services for Individuals and Small Businesses</h1>
         <p>
             Lakefront Accounting provides personalized tax preparation, proactive tax planning,
@@ -95,40 +169,40 @@
         <a class="button" href="https://lakefront.mytaxportal.online" target="_blank">
             Access Client Portal
         </a>
-    </section>
+    </div>
+</section>
 
-    <section id="services">
+<section id="services" class="section services">
+    <div class="container">
         <h2>Our Services</h2>
 
         <h3>Tax Return Preparation</h3>
         <p>
-            Professional preparation of individual and small business tax returns, with an emphasis
+            Professional preparation of individual and small business tax returns with an emphasis
             on accuracy, compliance, and timely filing.
         </p>
 
         <h3>Tax Planning</h3>
         <p>
-            Strategic tax planning for individuals and small businesses to help reduce tax liability,
-            plan for future obligations, and avoid surprises.
+            Strategic tax planning for individuals and small businesses to help reduce tax liability
+            and plan confidently for the future.
         </p>
 
         <h3>Advisory Services</h3>
         <p>
-            Ongoing advisory support for individuals and small business owners, including entity
-            structure considerations, financial decision support, and year-round tax guidance.
+            Ongoing advisory support including entity structure guidance and year-round tax planning.
         </p>
 
         <h3>Typical Pricing</h3>
         <p>
-            The pricing below reflects typical starting points for our services. Fees vary based on
-            complexity, volume of activity, and specific filing requirements. We will always confirm
-            pricing before work begins.
+            The pricing below reflects typical starting points. Fees vary based on complexity,
+            transaction volume, and filing requirements.
         </p>
 
         <h4>Business Tax Returns</h4>
         <ul>
             <li>C Corporation, S Corporation, or Partnership: <strong>$1,000</strong></li>
-            <li>Additional assets (e.g., rental properties): <strong>$150 per additional asset</strong></li>
+            <li>Additional assets: <strong>$150 per asset</strong></li>
             <li>Additional state return: <strong>$150 per state</strong></li>
             <li>Section 754 step-up: <strong>$300</strong></li>
         </ul>
@@ -136,42 +210,36 @@
         <h4>Individual Tax Returns</h4>
         <ul>
             <li>Base individual return: <strong>$250</strong></li>
-            <li>Schedule C or Schedule E: <strong>$150 per filing</strong></li>
+            <li>Schedule C or E: <strong>$150 per filing</strong></li>
             <li>Schedule D: <strong>$75</strong></li>
             <li>Additional state return: <strong>$150 per state</strong></li>
         </ul>
 
-        <h4>Other Services</h4>
-        <ul>
-            <li>Advisory, tax planning, and other services: <strong>$200 per hour</strong></li>
-        </ul>
-
         <p>
             We also offer year-round service packages that may include bookkeeping, tax planning,
-            advisory support, and tax preparation, billed on a monthly basis. Please contact us to
-            discuss package options.
+            advisory support, and tax preparation, billed monthly.
         </p>
-    </section>
+    </div>
+</section>
 
-    <section id="contact">
+<section id="contact" class="section contact">
+    <div class="container">
         <h2>Contact Us</h2>
         <p>
-            If you have questions about our services or would like to discuss working together,
-            please reach out by email.
+            If you have questions or would like to discuss working together, please email us.
         </p>
         <p>
             Email: <a href="mailto:tgraff@lakefrontaccounting.com">tgraff@lakefrontaccounting.com</a>
         </p>
         <p>
-            New tax clients and existing clients can create an account and securely upload tax
-            documents through our client portal.
+            New and existing tax clients can create an account and securely upload documents
+            through our client portal.
         </p>
         <a class="button" href="https://lakefront.mytaxportal.online" target="_blank">
             Go to Client Portal
         </a>
-    </section>
-
-</div>
+    </div>
+</section>
 
 <footer>
     © 2025 Lakefront Accounting
