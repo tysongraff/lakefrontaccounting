@@ -6,8 +6,12 @@
   --primary: #1f3a5f;     /* deep professional blue */
   --accent: #6bb0a6;      /* soft lake-inspired teal */
   --light-bg: #f6f8fb;
-  --text-dark: #1a1a1a;
-  --text-muted: #555;
+
+  --text: #1a1a1a;
+  --muted: #555;
+  --border: #e3e6ea;
+
+  --max-width: 1200px;
 }
 
 * {
@@ -28,9 +32,13 @@ body {
 ========================= */
 
 main {
+  margin: 0 auto;
+}
+
+main > section:not(.page-hero) {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 3rem 1.5rem;
+  padding: 0 1.5rem;
 }
 
 section + section {
@@ -42,6 +50,9 @@ section + section {
 ========================= */
 
 .site-header {
+   position: sticky;
+  top: 0;
+  z-index: 100;
   border-bottom: 1px solid var(--border);
   background-color: #ffffff;
 }
@@ -119,6 +130,7 @@ section + section {
   padding: 1.5rem;
   border-radius: 10px;
   border-top: 4px solid var(--accent);
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .service-card h2 {
@@ -126,6 +138,10 @@ section + section {
   color: var(--primary);
 }
 
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
 
 /* =========================
    Pricing
