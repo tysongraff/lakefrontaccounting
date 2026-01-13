@@ -46,28 +46,45 @@ section + section {
 }
 
 /* =========================
-   Header & Navigation
+   Header & Navigation (Enhanced)
 ========================= */
 
 .site-header {
-   position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 1px solid var(--border);
   background-color: #ffffff;
+  border-bottom: 1px solid var(--border);
 }
 
 .nav {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1.25rem 1.5rem;
+  padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
 }
 
 .logo img {
-  height: 42px;
+  height: 38px;
+}
+
+.company-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary);
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -78,13 +95,47 @@ section + section {
 
 .nav-links a {
   text-decoration: none;
-  color: var(--text);
+  color: var(--primary);
   font-weight: 500;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--accent);
+}
+
+/* CTA Button */
+
+.nav-cta .button-primary {
+  background-color: #f47c2c; /* matches the orange in your screenshot */
+  color: #ffffff;
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.nav-cta .button-primary:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   Mobile Header
+========================= */
+
+@media (max-width: 900px) {
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-cta {
+    margin-top: 0.75rem;
+  }
 }
 
 /* =========================
