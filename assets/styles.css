@@ -176,7 +176,7 @@ section + section {
       rgba(15, 32, 60, 0.75),
       rgba(15, 32, 60, 0.85)
     ),
-    url("../images/hero-lake.jpg");
+    url("../images/hero-lake.png");
   background-size: cover;
   background-position: center;
   display: flex;
