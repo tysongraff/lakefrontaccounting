@@ -289,6 +289,26 @@ section + section {
 }
 
 /* =========================
+   Secure Portal Button
+========================= */
+
+.portal-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lock-icon {
+  font-size: 1.1rem;
+}
+
+.portal-note {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* =========================
    Footer
 ========================= */
 
