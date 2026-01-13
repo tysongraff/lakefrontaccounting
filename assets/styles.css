@@ -254,6 +254,41 @@ section + section {
 }
 
 /* =========================
+   Client Portal CTA
+========================= */
+
+.portal-cta {
+  margin-top: 4rem;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    #2b4d7a
+  );
+  color: #ffffff;
+  border-radius: 14px;
+}
+
+.portal-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.portal-cta p {
+  max-width: 600px;
+  margin: 0 auto 1.75rem;
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+.portal-cta .button-primary {
+  background-color: #f47c2c;
+  padding: 0.75rem 1.75rem;
+  font-size: 1.05rem;
+}
+
+/* =========================
    Footer
 ========================= */
 
