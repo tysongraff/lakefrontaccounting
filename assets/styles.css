@@ -35,7 +35,7 @@ main {
   margin: 0 auto;
 }
 
-main > section:not(.page-hero) {
+main > section:not(.page-hero):not(.home-hero) {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 1.5rem;
