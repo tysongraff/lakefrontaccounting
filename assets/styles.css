@@ -166,6 +166,129 @@ section + section {
 }
 
 /* =========================
+   About - Partners
+========================= */
+
+.about-hero {
+  background: linear-gradient(180deg, #f7f9fc 0%, #ffffff 80%);
+  text-align: center;
+  padding: 4.5rem 1.5rem 3rem;
+}
+
+.about-hero .eyebrow {
+  display: inline-block;
+  color: #f47c2c;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.about-hero h1 {
+  color: var(--primary);
+  font-size: clamp(2.2rem, 3.8vw, 3rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.about-hero p {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #55657a;
+  font-size: 1.05rem;
+}
+
+.partners {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.partner-card {
+  display: grid;
+  grid-template-columns: minmax(220px, 360px) 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 2.5rem;
+  box-shadow: 0 18px 40px rgba(15, 34, 60, 0.08);
+}
+
+.partner-photo {
+  background: #f3f6fb;
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.partner-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+.partner-details h2 {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+
+.partner-details p {
+  color: #526173;
+  margin-bottom: 1rem;
+}
+
+.partner-role {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #f47c2c;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.partner-role-icon {
+  font-size: 1rem;
+}
+
+.partner-specialties {
+  margin-top: 1.5rem;
+}
+
+.specialties-title {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.chip-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.chip-list li {
+  background: #eef3f9;
+  color: var(--primary);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* =========================
    Home Hero
 ========================= */
 
@@ -400,3 +523,12 @@ section + section {
     justify-content: center;
   }
 }
+
+  .partner-card {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+
+  .partner-photo {
+    padding: 1rem;
+  }
