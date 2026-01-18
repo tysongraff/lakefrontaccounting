@@ -42,11 +42,11 @@ main {
 main > section:not(.page-hero):not(.home-hero) {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 2.5rem 1.5rem;
 }
 
 section + section {
-  margin-top: 3rem;
+  margin-top: 3.5rem;
 }
 
 /* =========================
