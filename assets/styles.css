@@ -281,7 +281,7 @@ section + section {
 }
 
 .partner-photo img {
-  width: 100%;
+  width: 50%;
   height: auto;
   display: block;
   border-radius: 16px;
